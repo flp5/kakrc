@@ -1,0 +1,62 @@
+snippet_support = true
+verbosity = 2
+
+[server]
+timeout = 1800
+
+[language_server.clangd]
+filetypes = ["c", "cpp"]
+roots = [".git"]
+command = "clangd"
+
+[language_server.elvish]
+filetypes = ["elvish"]
+roots = [".git"]
+command = "elvish"
+args = ["-lsp"]
+
+[language_server.gopls]
+filetypes = ["go"]
+roots = [".git"]
+command = "gopls"
+
+[language_server.lua-language-server]
+filetypes = ["lua"]
+roots = [".git"]
+command = "lua-language-server"
+settings_section = "Lua"
+
+[language_server.rust-analyzer]
+filetypes = ["rust"]
+roots = [".git"]
+command = "sh"
+args = [
+    "-c",
+    """
+        if path=$(rustup which rust-analyzer 2>/dev/null); then
+            "$path"
+        else
+            rust-analyzer
+        fi
+    """,
+]
+
+[language_server.zls]
+filetypes = ["zig"]
+roots = [".git"]
+command = "zls"
+
+[semantic_tokens]
+faces = [
+    {face="documentation", token="comment", modifiers=["documentation"]},
+    {face="comment", token="comment"},
+    {face="function", token="function"},
+    {face="keyword", token="keyword"},
+    {face="module", token="namespace"},
+    {face="operator", token="operator"},
+    {face="string", token="string"},
+    {face="type", token="type"},
+    {face="default+d", token="variable", modifiers=["readonly"]},
+    {face="default+d", token="variable", modifiers=["constant"]},
+    {face="variable", token="variable"},
+]

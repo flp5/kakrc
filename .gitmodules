@@ -1,0 +1,9 @@
+[submodule "colors/kakoune-themes"]
+	path = colors/kakoune-themes
+	url = https://github.com/anhsirk0/kakoune-themes
+[submodule "autoload/clipboard.kak"]
+	path = autoload/clipboard.kak
+	url = https://git.sr.ht/~parasrah/clipboard.kak
+[submodule "autoload/kak-ansi"]
+	path = autoload/kak-ansi
+	url = https://github.com/eraserhd/kak-ansi
