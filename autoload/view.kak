@@ -1,4 +1,4 @@
-colorscheme kanagawa
+colorscheme solarized-dark
 
 set-option global scrolloff 5,1
 

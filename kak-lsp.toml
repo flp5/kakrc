@@ -46,6 +46,11 @@ filetypes = ["zig"]
 roots = [".git"]
 command = "zls"
 
+[language_server.ols]
+filetypes = ["odin"]
+roots = [".git"]
+command = "ols"
+
 [semantic_tokens]
 faces = [
     {face="documentation", token="comment", modifiers=["documentation"]},
